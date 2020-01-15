@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace FellowshipChaitanya
+{
+    public class HarmonicNumber
+    {
+        public static void HarmonicNumberInput()
+        {
+            Console.WriteLine("Enter the Harmonic Value:\t(Ensure the Number>0)");
+            int number = Utility.IntegerInput();
+            Utility.harmonicNumberCalculation(number);
+        }
+    }
+}
