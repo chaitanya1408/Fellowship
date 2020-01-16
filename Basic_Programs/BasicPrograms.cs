@@ -6,7 +6,7 @@ namespace FellowshipChaitanya
 {
     class BasicPrograms
     {
-        public static void basicProgramList()
+        public static void BasicProgramList()
         {
             Boolean flag = true;
             while (flag)
@@ -24,25 +24,25 @@ namespace FellowshipChaitanya
                 switch (choice)
                 {
                     case 1:
-                        AdditionOfTwoNumbers.Addition();
+                        AdditionOfTwoNumbers.AdditionInput();
                         break;
                     case 2:
-                        Username.username();
+                        Username.UsernameInput();
                         break;
                     case 3:
-                        FlipCoin.tossInput();
+                        FlipCoin.TossInput();
                         break;
                     case 4:
-                        LeapYear.leapyaer();
+                        LeapYear.LeapyaerInput();
                         break;
                     case 5:
-                        PowerOfTwo.powerInput();
+                        PowerOfTwo.PowerInput();
                         break;
                     case 6:
                         HarmonicNumber.HarmonicNumberInput();
                         break;
                     case 7:
-                        Factors.factorInput();
+                        Factors.FactorInput();
                         break;
                     case 8:
                         Console.WriteLine("Basic Program Exit!!");
@@ -52,7 +52,7 @@ namespace FellowshipChaitanya
                         Console.WriteLine("Wrong Choice.\nDo you want to work in Bassic Program List?\nIf yes press 1 ");
                         choice = Convert.ToInt32(Console.ReadLine());
                         if (choice == 1)
-                            BasicPrograms.basicProgramList();
+                            BasicPrograms.BasicProgramList();
                         else
                             flag = false;
                         break;

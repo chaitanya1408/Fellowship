@@ -6,13 +6,13 @@ namespace FellowshipChaitanya
 {
     class GuessNumber
     {
-        public static void guessnumberInput()
+        public static void GuessnumberInput()
         {
             Console.WriteLine("Enter Lower boundary of number");
             int lower = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter Upperer boundary of number");
             int upper = Convert.ToInt32(Console.ReadLine());
-            Utility.guessNumberWorking(lower, upper);
+            Utility.GuessNumberWorking(lower, upper);
         }
     }
 }

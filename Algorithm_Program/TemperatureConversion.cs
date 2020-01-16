@@ -6,7 +6,7 @@ namespace FellowshipChaitanya
 {
     class TemperatureConversion
     {
-        public static void tempeartureConversionInput()
+        public static void TempeartureConversionInput()
         {
             int result,temperature;
             Console.WriteLine("Enter choice:\n1. Celcius to fahrenheit\n2. Fahrenheit to celcius");
@@ -16,13 +16,13 @@ namespace FellowshipChaitanya
                 case 1:
                     Console.WriteLine("Enter temperature in celcius");
                     temperature = Utility.IntegerInput();
-                    result = (int)Utility.celciusToFahreheit(temperature);
+                    result = (int)Utility.CelciusToFahreheit(temperature);
                     Console.WriteLine("Temperature in Fahrenheit is:" + result);
                     break;
                 case 2:
                     Console.WriteLine("Enter tempearture in fahrenheit");
                     temperature = Utility.IntegerInput();
-                    result =(int) Utility.fahrenheitToCelcius(temperature);
+                    result =(int) Utility.FahrenheitToCelcius(temperature);
                     Console.WriteLine("Temperature in celcius is:" + result);
                     break;
                 default:

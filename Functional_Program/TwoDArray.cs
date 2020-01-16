@@ -12,7 +12,7 @@ namespace FellowshipChaitanya
             int row = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter Number of Columns:");
             int column = Convert.ToInt32(Console.ReadLine());
-            Utility.twoDArray(row, column);
+            Utility.TwoDArray(row, column);
             
         }
     }

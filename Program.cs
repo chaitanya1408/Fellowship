@@ -20,13 +20,13 @@ namespace FellowshipChaitanya
                 switch (choice)
                 {
                     case 1:
-                        BasicPrograms.basicProgramList();
+                        BasicPrograms.BasicProgramList();
                         break;
                     case 2:
-                        LogicalPrograms.logicalProgramList();
+                        LogicalPrograms.LogicalProgramList();
                         break;
                     case 3:
-                        FunctionalPrograms.functionalProgramList();
+                        FunctionalPrograms.FunctionalProgramList();
                         break;
                     case 4:
                         AlgorithmPrograms.AlgorithmProgramList();

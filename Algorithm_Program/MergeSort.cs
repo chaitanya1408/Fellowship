@@ -6,12 +6,12 @@ namespace FellowshipChaitanya
 {
     class MergeSort
     {
-        public static void mergeSortInput()
+        public static void MergeSortInput()
         {
             Console.WriteLine("How many Element do you want to enter");
             int input = Utility.IntegerInput();
-            int[] array = Utility.getInputInArray(input);
-            Utility.sort(array,0,array.Length);
+            int[] array = Utility.GetInputInArray(input);
+            Utility.Sort(array,0,array.Length);
         }
     }
 }

@@ -6,7 +6,7 @@ namespace FellowshipChaitanya
 {
     class DayOfWeek
     {
-        public static void dayOfWeekInput()
+        public static void DayOfWeekInput()
         {
             Console.WriteLine("Enter the month:\t ex.1 for january");
             int month = Utility.IntegerInput();
@@ -14,7 +14,7 @@ namespace FellowshipChaitanya
             int date = Utility.IntegerInput();
             Console.WriteLine("Enter the year");
             int year = Utility.IntegerInput();
-            int day = Utility.dayOfWeekCalculator(month,date,year);
+            int day = Utility.DayOfWeekCalculator(month,date,year);
            
             switch(day)
             {

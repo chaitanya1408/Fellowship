@@ -6,11 +6,11 @@ namespace FellowshipChaitanya
 {
     class LeapYear
     {
-        public static void leapyaer()
+        public static void LeapyaerInput()
         {
             Console.WriteLine("Eneter Four digit year");
             int year = Convert.ToInt32(Console.ReadLine());
-            Utility.leapYearCheck(year);
+            Utility.LeapYearCheck(year);
         }
     }
 }

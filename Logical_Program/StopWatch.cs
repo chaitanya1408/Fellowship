@@ -6,24 +6,24 @@ namespace FellowshipChaitanya
 {
     class StopWatch
     {
-        public static void stopwatchInput()
+        public static void StopwatchInput()
         {
             Console.WriteLine("Press 1 to start the time:");
             int input = Convert.ToInt32(Console.ReadLine());
             if (input == 1)
             {
-                Utility.startTime();
+                Utility.StartTime();
             }
             else
             {
                 Console.WriteLine("You entered Wrong input.");
-                StopWatch.stopwatchInput();
+                StopWatch.StopwatchInput();
             }
             Console.WriteLine("Press 2 to Stop watch");
             input = Convert.ToInt32(Console.ReadLine());
             if(input==2)
             {
-                Utility.stopTime();
+                Utility.StopTime();
             }
        
 

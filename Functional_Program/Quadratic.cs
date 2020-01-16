@@ -16,7 +16,7 @@ namespace FellowshipChaitanya
             Console.WriteLine("Enter value for c:");
             int c = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Quadratic Equation is:(" + a + "*x*x+" + b + "x+" + "c)");
-            Utility.quadraticRoots(a, b, c);
+            Utility.QuadraticRoots(a, b, c);
 
         }
 

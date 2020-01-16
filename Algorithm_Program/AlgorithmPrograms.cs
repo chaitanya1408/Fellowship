@@ -20,59 +20,62 @@ namespace FellowshipChaitanya
                 Console.WriteLine("9. Square Root\n10. Decimal to binary ");
                 Console.WriteLine("11. Prime  anagram and Pallindrome\n12. Binary Search Number ");
                 Console.WriteLine("13. Binary search string \n14. Guess Number");
-                Console.WriteLine("15. Merge sort ");
-                Console.WriteLine("16. Exit");
+                Console.WriteLine("15. Merge sort \n16. Permutation of string");
+                Console.WriteLine("17. Exit");
                 Console.WriteLine(" ");
                 Console.WriteLine("Enter Your Choice:");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
                     case 1:
-                        InsertionSort.insertionSortInput();
+                        InsertionSort.InsertionSortInput();
                         break;
                     case 2:
-                        BubbleSort.bubbleSortInput();
+                        BubbleSort.BubbleSortInput();
                         break;
                     case 3:
-                        Anagram.anagramInput();
+                        Anagram.AnagramInput();
                         break;
                     case 4:
-                        PrimeNumber.primeNumberInput();
+                        PrimeNumber.PrimeNumberInput();
                         break;
                     case 5:
-                        VendingMachine.vendingMachineInput();
+                        VendingMachine.VendingMachineInput();
                         break;
                     case 6:
-                        DayOfWeek.dayOfWeekInput();
+                        DayOfWeek.DayOfWeekInput();
                         break;
                     case 7:
-                        TemperatureConversion.tempeartureConversionInput();
+                        TemperatureConversion.TempeartureConversionInput();
                         break;
                     case 8:
-                        MonthlyPayment.monthlyPaymentInput();
+                        MonthlyPayment.MonthlyPaymentInput();
                         break;
                     case 9:
-                        SquareRoot.squarerootInput();
+                        SquareRoot.SquarerootInput();
                         break;
                     case 10:
-                        DecimalToBinary.decimalInput();
+                        DecimalToBinary.DecimalInput();
                         break;
                     case 11:
-                        PrimeAnagramPalindrome.primeAnagramPalindrome();
+                        PrimeAnagramPalindrome.PrimeAnagramPalindromeInput();
                         break;
                     case 12:
-                        BinarySearchInteger.binarySearchInputInteger();
+                        BinarySearchInteger.BinarySearchInputInteger();
                         break;
                     case 13:
-                        BinarySearchString.binarySearchInputString();
+                        BinarySearchString.BinarySearchInputString();
                         break;
                     case 14:
-                        GuessNumber.guessnumberInput();
+                        GuessNumber.GuessnumberInput();
                         break;
                     case 15:
-                        MergeSort.mergeSortInput();
+                        MergeSort.MergeSortInput();
                         break;
                     case 16:
+                        PermutationString.PermutationStringInput();
+                        break;
+                    case 17:
                         Console.WriteLine("Basic Program Exit!!");
                         flag = false;
                         break;
@@ -80,7 +83,7 @@ namespace FellowshipChaitanya
                         Console.WriteLine("Wrong Choice.\nDo you want to work in Bassic Program List?\nIf yes press 1 ");
                         choice = Convert.ToInt32(Console.ReadLine());
                         if (choice == 1)
-                            BasicPrograms.basicProgramList();
+                            AlgorithmPrograms.AlgorithmProgramList();
                         else
                             flag = false;
                         break;

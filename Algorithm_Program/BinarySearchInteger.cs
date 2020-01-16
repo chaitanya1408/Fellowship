@@ -6,7 +6,7 @@ namespace FellowshipChaitanya
 {
     class BinarySearchInteger
     {
-        public static void binarySearchInputInteger()
+        public static void BinarySearchInputInteger()
         {
             int i;
             Console.WriteLine("How many numbers do you want to print in the array");
@@ -19,7 +19,7 @@ namespace FellowshipChaitanya
             }
             Console.WriteLine("Which Number do you want to search");
             int key = Convert.ToInt32(Console.ReadLine());
-            Utility.binarySearchinteger(array,key);
+            Utility.BinarySearchinteger(array,key);
 
         }
 

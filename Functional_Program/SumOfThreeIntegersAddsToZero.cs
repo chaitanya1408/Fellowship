@@ -10,7 +10,7 @@ namespace FellowshipChaitanya
         {
             Console.WriteLine("Enter how many elements do you want in an array");
             int input = Convert.ToInt32(Console.ReadLine());
-            Utility.addThreeElements(input);
+            Utility.AddThreeElements(input);
         }
     }
 }

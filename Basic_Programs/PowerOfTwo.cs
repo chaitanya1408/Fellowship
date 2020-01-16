@@ -6,11 +6,11 @@ namespace FellowshipChaitanya
 {
     public class PowerOfTwo
     {
-        public static void powerInput()
+        public static void PowerInput()
         {
             Console.WriteLine("Enter the power value.(Enter 0<= Power Value <31)");
             int power = Convert.ToInt32(Console.ReadLine());
-            Utility.powerOfTwoCalculation(power);
+            Utility.PowerOfTwoCalculation(power);
         }
     }
 }

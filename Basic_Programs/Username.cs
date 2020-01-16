@@ -6,11 +6,11 @@ namespace FellowshipChaitanya
 {
     public class Username
     {
-        public static void username()
+        public static void UsernameInput()
         {
             Console.WriteLine("Enter Username:");
             String input = Console.ReadLine();
-            Utility.username(input);
+            Utility.UsernameWorking(input);
             
             
         }

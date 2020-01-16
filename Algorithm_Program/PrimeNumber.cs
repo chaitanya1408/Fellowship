@@ -6,7 +6,7 @@ namespace FellowshipChaitanya
 {
     class PrimeNumber
     {
-        public static void primeNumberInput()
+        public static void PrimeNumberInput()
         {
             Boolean flag = true;
             while(flag)
@@ -19,14 +19,14 @@ namespace FellowshipChaitanya
                     case 1:
                         Console.WriteLine("Enter a number");
                         int number = Convert.ToInt32(Console.ReadLine());
-                        Utility.primeNumber(number);
+                        Utility.PrimeNumberCalculator(number);
                         break;
                     case 2:
                         Console.WriteLine("Enetr lower boundary of range");
                         int lower = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine("Enter upper boundary of range");
                         int upper = Convert.ToInt32(Console.ReadLine());
-                        Utility.primeNumberRange(lower, upper);
+                        Utility.PrimeNumberRange(lower, upper);
                         break;
                     default:
                         flag = false;

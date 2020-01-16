@@ -6,7 +6,7 @@ namespace FellowshipChaitanya
 {
     class MonthlyPayment
     {
-        public static void monthlyPaymentInput()
+        public static void MonthlyPaymentInput()
         {
             Console.WriteLine("Enter The principal Loan amount:");
             int loan = Convert.ToInt32(Console.ReadLine());
@@ -14,7 +14,7 @@ namespace FellowshipChaitanya
             int years = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the rate percent interest");
             Double rate = Convert.ToDouble(Console.ReadLine());
-            double monthlypayment=Utility.monthlyPaymentCalculator(loan, years, rate);
+            double monthlypayment=Utility.MonthlyPaymentCalculator(loan, years, rate);
             Console.WriteLine("Monthly payment:" + monthlypayment);
         }
     }

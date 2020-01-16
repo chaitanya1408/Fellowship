@@ -6,16 +6,16 @@ namespace FellowshipChaitanya
 {
     class DecimalToBinary
     {
-        public static void decimalInput()
+        public static void DecimalInput()
         {
             Console.WriteLine("Enter decimal number");
             int number = Utility.IntegerInput();
             Console.WriteLine("Binary Conversion of " + number);
-            int[] result=Utility.decimalToBinaryconverter(number);
+            Utility.DecimalToBinaryconverter(number);
             Console.WriteLine();
-            int newnumber=Utility.swapNibbles(number);
+            int newnumber=Utility.SwapNibbles(number);
             Console.WriteLine("after swapping nibbles New Number is:" + newnumber);
-            Utility.decimalToBinaryconverter(newnumber);
+            Utility.DecimalToBinaryconverter(newnumber);
 
         }
     }

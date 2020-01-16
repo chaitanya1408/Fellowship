@@ -6,7 +6,7 @@ namespace FellowshipChaitanya
 {
     class BinarySearchString
     {
-        public static void binarySearchInputString()
+        public static void BinarySearchInputString()
         {
             int i;
             Console.WriteLine("How many Strings do you want to print in the array");
@@ -19,7 +19,7 @@ namespace FellowshipChaitanya
             }
             Console.WriteLine("Which string do you want to search");
             String key = Console.ReadLine();
-            int result=Utility.binarySearchString(array, key);
+            int result=Utility.BinarySearchString(array, key);
             if (result == -1)
                 Console.WriteLine("Element not present");
             else

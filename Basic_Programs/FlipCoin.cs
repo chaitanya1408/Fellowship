@@ -6,11 +6,11 @@ namespace FellowshipChaitanya
 {
     public class FlipCoin
     {
-        public static void tossInput()
+        public static void TossInput()
         {
             Console.WriteLine("Enter How many Tosses do you wants|?");
             int toss = Utility.IntegerInput();
-            Utility.flipCoinCalculation(toss);
+            Utility.FlipCoinCalculation(toss);
         }
     }
 }

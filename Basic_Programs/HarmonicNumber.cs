@@ -10,7 +10,7 @@ namespace FellowshipChaitanya
         {
             Console.WriteLine("Enter the Harmonic Value:\t(Ensure the Number>0)");
             int number = Utility.IntegerInput();
-            Utility.harmonicNumberCalculation(number);
+            Utility.HarmonicNumberCalculation(number);
         }
     }
 }

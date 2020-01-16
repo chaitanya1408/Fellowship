@@ -6,11 +6,11 @@ namespace FellowshipChaitanya
 {
     class SquareRoot
     {
-        public static void squarerootInput()
+        public static void SquarerootInput()
         {
             Console.WriteLine("Enter the number");
             Double number = Utility.DoubleInput();
-            Utility.newtonsMethod(number);
+            Utility.NewtonsMethod(number);
         }
     }
 }

@@ -6,7 +6,7 @@ namespace FellowshipChaitanya
 {
     public class FunctionalPrograms
     {
-        public static void functionalProgramList()
+        public static void FunctionalProgramList()
         {
             Boolean flag = true;
             while (flag)
@@ -34,7 +34,7 @@ namespace FellowshipChaitanya
 
                     case 3:
 
-                        Distance.distance();
+                        Distance.DistanceInput();
                         break;
 
                     case 4:
@@ -44,7 +44,7 @@ namespace FellowshipChaitanya
 
                     case 5:
 
-                        WindChill.windchill();
+                        WindChill.Windchill();
                         break;
 
                     case 6:
@@ -56,7 +56,7 @@ namespace FellowshipChaitanya
                         Console.WriteLine("Wrong Choice.\nDo you want to work in Functional Program List?\nIf yes press 1 ");
                         choice = Convert.ToInt32(Console.ReadLine());
                         if (choice == 1)
-                            FunctionalPrograms.functionalProgramList();
+                            FunctionalPrograms.FunctionalProgramList();
                         else
                             flag = false;
                             break;
