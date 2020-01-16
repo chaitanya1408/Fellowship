@@ -8,11 +8,18 @@ namespace FellowshipChaitanya
     {
         public static void UsernameInput()
         {
-            Console.WriteLine("Enter Username:");
-            String input = Console.ReadLine();
-            Utility.UsernameWorking(input);
-            
-            
+            try
+            {
+                Console.WriteLine("Enter Username:");
+                String input = Console.ReadLine();
+                Utility.UsernameWorking(input);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+
         }
     }
 }

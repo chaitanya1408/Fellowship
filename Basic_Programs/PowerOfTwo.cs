@@ -8,9 +8,16 @@ namespace FellowshipChaitanya
     {
         public static void PowerInput()
         {
-            Console.WriteLine("Enter the power value.(Enter 0<= Power Value <31)");
-            int power = Convert.ToInt32(Console.ReadLine());
-            Utility.PowerOfTwoCalculation(power);
+            try
+            {
+                Console.WriteLine("Enter the power value.(Enter 0<= Power Value <31)");
+                int power = Convert.ToInt32(Console.ReadLine());
+                Utility.PowerOfTwoCalculation(power);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

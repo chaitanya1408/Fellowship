@@ -8,15 +8,19 @@ namespace FellowshipChaitanya
     {
         public static void Gamblerinput()
         {
-            Console.WriteLine("Enter the stake:");
-            int stake = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the Goal:");
-            int goal = Convert.ToInt32(Console.ReadLine());
+            try
+            {
+                Console.WriteLine("Enter the stake:");
+                int stake = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter the Goal:");
+                int goal = Convert.ToInt32(Console.ReadLine());
 
-            Utility.Gamblingcalculator(stake, goal);
-                
-            
-              
+                Utility.Gamblingcalculator(stake, goal);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

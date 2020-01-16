@@ -8,8 +8,15 @@ namespace FellowshipChaitanya
     {
         public static void CouponnumberInput()
         {
-            int[] distinctArray = { 6, 0, 1, 2, 8, 9 };
-            Utility.CouponNumberWorking(distinctArray);
+            try
+            {
+                int[] distinctArray = { 6, 0, 1, 2, 8, 9 };
+                Utility.CouponNumberWorking(distinctArray);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

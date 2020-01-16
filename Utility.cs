@@ -701,12 +701,13 @@ namespace FellowshipChaitanya
                     if (choice == 1)
                     {
                         high = mid - 1;
-                        mid = (low + high) / 2;
+                        mid = (low + high) / 2; 
                     }
                     if (choice == 2)
                     {
                         low = mid + 1;
                         mid = (low + high) / 2;
+                        
                     }
 
                 }

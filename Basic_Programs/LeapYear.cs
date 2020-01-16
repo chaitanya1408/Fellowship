@@ -8,9 +8,16 @@ namespace FellowshipChaitanya
     {
         public static void LeapyaerInput()
         {
-            Console.WriteLine("Eneter Four digit year");
-            int year = Convert.ToInt32(Console.ReadLine());
-            Utility.LeapYearCheck(year);
+            try
+            {
+                Console.WriteLine("Eneter Four digit year");
+                int year = Convert.ToInt32(Console.ReadLine());
+                Utility.LeapYearCheck(year);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

@@ -8,16 +8,22 @@ namespace FellowshipChaitanya
     {
         public static void AnagramInput()
         {
-
-            Console.WriteLine("Enetr First String");
-            String string1=Utility.StringInput();
-            Console.WriteLine("Enetr second String");
-            String string2 = Utility.StringInput();
-            Boolean result=Utility.AnagramCheck(string1, string2);
-            if (result == true)
-                Console.WriteLine(string1 + " and " + string2 + " Strings Anagram");
-            else
-                Console.WriteLine(string1 + " and " + string2 + " strings are not Anagram");
+            try
+            {
+                Console.WriteLine("Enetr First String");
+                String string1 = Utility.StringInput();
+                Console.WriteLine("Enetr second String");
+                String string2 = Utility.StringInput();
+                Boolean result = Utility.AnagramCheck(string1, string2);
+                if (result == true)
+                    Console.WriteLine(string1 + " and " + string2 + " Strings Anagram");
+                else
+                    Console.WriteLine(string1 + " and " + string2 + " strings are not Anagram");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

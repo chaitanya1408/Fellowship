@@ -8,24 +8,31 @@ namespace FellowshipChaitanya
     {
         public static void StopwatchInput()
         {
-            Console.WriteLine("Press 1 to start the time:");
-            int input = Convert.ToInt32(Console.ReadLine());
-            if (input == 1)
+            try
             {
-                Utility.StartTime();
+                Console.WriteLine("Press 1 to start the time:");
+                int input = Convert.ToInt32(Console.ReadLine());
+                if (input == 1)
+                {
+                    Utility.StartTime();
+                }
+                else
+                {
+                    Console.WriteLine("You entered Wrong input.");
+                    StopWatch.StopwatchInput();
+                }
+                Console.WriteLine("Press 2 to Stop watch");
+                input = Convert.ToInt32(Console.ReadLine());
+                if (input == 2)
+                {
+                    Utility.StopTime();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                Console.WriteLine("You entered Wrong input.");
-                StopWatch.StopwatchInput();
+                Console.WriteLine(ex.Message);
             }
-            Console.WriteLine("Press 2 to Stop watch");
-            input = Convert.ToInt32(Console.ReadLine());
-            if(input==2)
-            {
-                Utility.StopTime();
-            }
-       
+
 
         }
         

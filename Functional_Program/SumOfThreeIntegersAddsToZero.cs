@@ -8,9 +8,16 @@ namespace FellowshipChaitanya
     {
         public static void SumArray()
         {
-            Console.WriteLine("Enter how many elements do you want in an array");
-            int input = Convert.ToInt32(Console.ReadLine());
-            Utility.AddThreeElements(input);
+            try
+            {
+                Console.WriteLine("Enter how many elements do you want in an array");
+                int input = Convert.ToInt32(Console.ReadLine());
+                Utility.AddThreeElements(input);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

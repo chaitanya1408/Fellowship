@@ -9,12 +9,20 @@ namespace FellowshipChaitanya
         public static void AdditionInput()
         {
             int a, b;
-            Console.WriteLine("Enter First number:");
-            a = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter second number:");
-            b = Convert.ToInt32(Console.ReadLine());
-            Utility.Add(a,b);
-            
+            try
+            {
+                Console.WriteLine("Enter First number:");
+                a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter second number:");
+                b = Convert.ToInt32(Console.ReadLine());
+
+
+                Utility.Add(a, b);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
