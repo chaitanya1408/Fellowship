@@ -19,6 +19,7 @@ namespace FellowshipChaitanya
                 {
                     array[i] = Convert.ToInt32(Console.ReadLine());
                 }
+                Array.Sort(array);
                 Console.WriteLine("Which Number do you want to search");
                 int key = Convert.ToInt32(Console.ReadLine());
                 Utility.BinarySearchinteger(array, key);

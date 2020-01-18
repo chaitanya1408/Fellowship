@@ -28,7 +28,8 @@ namespace FellowshipChaitanya
                             int lower = Convert.ToInt32(Console.ReadLine());
                             Console.WriteLine("Enter upper boundary of range");
                             int upper = Convert.ToInt32(Console.ReadLine());
-                            Utility.PrimeNumberRange(lower, upper);
+                            int[] primenumbersarray = Utility.PrimeNumberRange(lower, upper);
+                            Utility.DisplayArray(primenumbersarray);
                             break;
                         default:
                             flag = false;

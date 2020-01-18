@@ -8,17 +8,18 @@ namespace FellowshipChaitanya
     {
         public static void LogicalProgramList()
         {
-            try
-            {
+            
                 Boolean flag = true;
                 while (flag)
                 {
                     Console.WriteLine(" ");
                     Console.WriteLine("Logical Program List:");
                     Console.WriteLine("\n1. Gambler\n2. Coupon Number ");
-                    Console.WriteLine("3. stopWatch\n4. Tic Tac Toe");
-                    Console.WriteLine("5. Exit ");
+                    Console.WriteLine("");
+                    Console.WriteLine("3. Exit ");
                     Console.WriteLine("Enter your choice:");
+                try
+                {
                     int choice = Convert.ToInt32(Console.ReadLine());
                     switch (choice)
                     {
@@ -28,10 +29,8 @@ namespace FellowshipChaitanya
                         case 2:
                             CouponNumbers.CouponnumberInput();
                             break;
+                        
                         case 3:
-                            StopWatch.StopwatchInput();
-                            break;
-                        case 5:
                             Console.WriteLine("Logical Program exit!");
                             flag = false;
                             break;
@@ -48,11 +47,12 @@ namespace FellowshipChaitanya
 
                     }
                 }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+           
         }
     }
 }

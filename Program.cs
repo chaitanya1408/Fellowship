@@ -4,49 +4,63 @@ namespace FellowshipChaitanya
 {
     public class Program
     {
-        public static void Main(string[] args)
-        {
-            Boolean flag = true;
-            while (flag)
-            {
-                Console.WriteLine(" ");
-                Console.WriteLine("Program List:");
-                Console.WriteLine("\n1. Basic Programs\n2. Logical Programs");
-                Console.WriteLine("3. Functional Program\n4. Algorithmic Programs");
-                Console.WriteLine("5. Exit");
-                Console.WriteLine(" ");
-                Console.WriteLine("Enter Your Choice:");
-                int choice = Convert.ToInt32(Console.ReadLine());
-                switch (choice)
+        public static void Main()
+        { Boolean flag = true;
+                while (flag)
                 {
-                    case 1:
-                        BasicPrograms.BasicProgramList();
-                        break;
-                    case 2:
-                        LogicalPrograms.LogicalProgramList();
-                        break;
-                    case 3:
-                        FunctionalPrograms.FunctionalProgramList();
-                        break;
-                    case 4:
-                        AlgorithmPrograms.AlgorithmProgramList();
-                        break;
-                    case 5:
-                        Console.WriteLine("Program Exit!!");
-                        flag = false;                       
-                        break;
-                    default:
-                        Console.WriteLine("Wrong Choice.\nDo you want to work in  Program List?\nIf yes press 1 ");
-                        if(choice!=0)
-                        {
+                    Console.WriteLine(" ");
+                    Console.WriteLine("Program List:");
+                    Console.WriteLine("\n1. Basic Programs\n2. Logical Programs");
+                    Console.WriteLine("3. Functional Program\n4. Algorithmic Programs");
+                    Console.WriteLine("5. Collection\n6. Exit");
+                    Console.WriteLine(" ");
+                    Console.WriteLine("Enter Your Choice:");
+
+                try
+                {
+
+                    int choice = Convert.ToInt32(Console.ReadLine());
+                    switch (choice)
+                    {
+                        case 1:
+                            BasicPrograms.BasicProgramList();
+                            break;
+                        case 2:
+                            LogicalPrograms.LogicalProgramList();
+                            break;
+                        case 3:
+                            FunctionalPrograms.FunctionalProgramList();
+                            break;
+                        case 4:
+                            AlgorithmPrograms.AlgorithmProgramList();
+                            break;
+                        case 5:
+                            List.ListExample1();
+                            break;
+                        case 6:
                             Console.WriteLine("Program Exit!!");
                             flag = false;
-                        }
-                        break;
+                            break;
+                        default:
+                            Console.WriteLine("Wrong Choice.\nDo you want to work in  Program List?\nIf yes press 1 ");
+                            if (choice != 0)
+                            {
+                                Console.WriteLine("Program Exit!!");
+                                flag = false;
+                            }
+                            break;
+                    }
+
                 }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
             }
-               Console.ReadKey();
-            
+           
+            Console.ReadKey();
+           
         }
     } 
 }

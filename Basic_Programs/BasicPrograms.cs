@@ -8,8 +8,7 @@ namespace FellowshipChaitanya
     {
         public static void BasicProgramList()
         {
-            try
-            {
+           
                 Boolean flag = true;
                 while (flag)
                 {
@@ -22,6 +21,8 @@ namespace FellowshipChaitanya
                     Console.WriteLine("8. Exit");
                     Console.WriteLine(" ");
                     Console.WriteLine("Enter Your Choice:");
+                try
+                {
                     int choice = Convert.ToInt32(Console.ReadLine());
                     switch (choice)
                     {
@@ -60,11 +61,12 @@ namespace FellowshipChaitanya
                             break;
                     }
                 }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            
 
 
         }

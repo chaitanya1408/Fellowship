@@ -14,7 +14,7 @@ namespace FellowshipChaitanya
                 int number = Convert.ToInt32(Console.ReadLine());
                 Utility.Factorscalculator(number);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }

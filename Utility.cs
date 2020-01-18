@@ -147,7 +147,7 @@ namespace FellowshipChaitanya
                 LeapYear.LeapyaerInput();
             }
         }
-
+        
         public static void Gamblingcalculator(int stake, int goal)
         {
             Random rand = new Random();
@@ -161,7 +161,7 @@ namespace FellowshipChaitanya
                 while (cash > 0 && cash < goal)
                 {
                     bets++;
-                    if (rand.Next(1) < 0.5)
+                    if (rand.Next()*6 < 3.0)
                     {
                         cash++;
                     }
@@ -178,22 +178,12 @@ namespace FellowshipChaitanya
             }
             Console.WriteLine("Wins:" + wins);
             Console.WriteLine("Number of Bets:" + bets);
-            Console.WriteLine("Percent of wins" + (wins * 100) / bets);
-            Console.WriteLine("Percent of fail:" + ((bets - wins) * 100) / bets);
+            Console.WriteLine("Percent of wins" + (wins * 100) / trials);
+            Console.WriteLine("Percent of fail:" + ((trials - wins) * 100) /trials);
 
         }
-
-        public static void StartTime()
-        {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
-        }
-        public static void StopTime()
-        {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Stop();
-            Console.WriteLine("Time elapsed: {0}", stopwatch.Elapsed);
-        }
+        
+    
 
         public static void PowerOfTwoCalculation(int power)
         {
@@ -255,7 +245,7 @@ namespace FellowshipChaitanya
             for (i = 0; i < toss; i++)
             {
 
-                double input = r.NextDouble() * 1;
+                double input = r.NextDouble() * 1.0;
                 if (input < 0.5)
                 {
                     head++;
@@ -264,9 +254,12 @@ namespace FellowshipChaitanya
                 {
                     tails++;
                 }
+
             }
-            Console.WriteLine("Percentage of Heads:" + ((head * 100) / toss));
-            Console.WriteLine("Percentage of Tails:" + ((tails * 100) / toss));
+            double percentageofhead = ((head * 100) / toss);
+            double percentageoftails= ((tails * 100) / toss);
+            Console.WriteLine("Percentage of Heads:" + percentageofhead);
+            Console.WriteLine("Percentage of Tails:" + percentageoftails);
         }
 
         public static void HarmonicNumberCalculation(int number)
@@ -307,13 +300,18 @@ namespace FellowshipChaitanya
             Utility.DisplayArray(array);
         }
 
+        /// <summary>
+        /// gjgjgjgj  
+        /// </summary>
+        /// <param name="array">kkkkh</param>
         public static void BubbleSortWork(int[] array)
         {
             Console.WriteLine("Before Sorting array:");
             Utility.DisplayArray(array);
-
+            //gjgjgjgj
             for (int i = 0; i < array.Length - 1; i++)
             {
+                //kjhkh
                 for (int j = 0; j < array.Length - i - 1; j++)
                 {
                     if (array[j] > array[j + 1])
@@ -348,7 +346,10 @@ namespace FellowshipChaitanya
             int i;
             for (i = 0; i < array.Length; i++)
             {
-                Console.Write(array[i] + "\t");
+                if (array[i] != 0)
+                {
+                    Console.Write(array[i] + "\t");
+                }
             }
             Console.WriteLine();
         }
@@ -398,10 +399,11 @@ namespace FellowshipChaitanya
             return true;
         }
 
-        public static void PrimeNumberRange(int lower, int upper)
+        public static int[] PrimeNumberRange(int lower, int upper)
         {
 
-            int i, j, flag;
+            int i,k=0, j, flag;
+            int[] primenumbersarray = new int[500];
 
             for (i = lower; i <= upper; i++)
             {
@@ -420,8 +422,11 @@ namespace FellowshipChaitanya
                 if (flag == 1)
                 {
                     Console.Write(i + "\t");
+                    primenumbersarray[k] = i;
+                    k++;
                 }
             }
+            return primenumbersarray;
         }
         public static void PrimeNumberCalculator(int input)
         {
@@ -527,7 +532,7 @@ namespace FellowshipChaitanya
         public static void PrimeNumberArray(int lower, int upper)
         {
             int i, j, k = 0, flag;
-            int[] array = new int[1000];
+            int[] array = new int[upper-lower+1];
             for (i = lower; i <= upper; i++)
             {
                 if (i == 0 || i == 1)
@@ -544,7 +549,7 @@ namespace FellowshipChaitanya
                 }
                 if (flag == 1)
                 {
-                    Console.Write(i + "\t");
+                    Console.Write(i + " ");
                     array[k] = i;
                     k++;
                 }
@@ -586,7 +591,7 @@ namespace FellowshipChaitanya
                         {
                             if (array[i] != 0 || array[j] != 0)
                             {
-                                Console.Write(string1 + " and " + string2 + "   ");
+                                Console.Write(string1 + " and" + string2 + "   ");
                             }
                         }
                     }
@@ -683,7 +688,7 @@ namespace FellowshipChaitanya
             Console.WriteLine("Think of a number");
             int low = 0;
             int high = array.Length - 1;
-            int mid = (low + high) / 2;
+            int mid = (low + high) / 2; 
             while (low <= high)
             {
                 Console.WriteLine("is " + array[mid] + " your number? Press 1 for YES, Press 0 for NO");
@@ -844,6 +849,20 @@ namespace FellowshipChaitanya
             string s = new string(charArray);
             return s;
         }
+        public static void DisplayPrimeArray(int[] array)
+        {
+            int i;
+            for (i = 0; i < array.Length; i++)
+            {
+                if (array[i] != 0)
+                {
+                    Console.Write(array[i] + "\t");
+                }
+            }
+            Console.WriteLine();
+        }
+
+
     }
 }
 

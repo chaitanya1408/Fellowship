@@ -8,24 +8,26 @@ namespace FellowshipChaitanya
     {
         public static void AlgorithmProgramList()
         {
-            try
-            {
+            
                 Boolean flag = true;
-                while (flag)
+            while (flag)
+            {
+                Console.WriteLine(" ");
+                Console.WriteLine("Algorithm Program List:");
+                Console.WriteLine("\n1. Insrtion sort\n2. Bubble Sort");
+                Console.WriteLine("3. Anagram\n4. PrimeNumber");
+                Console.WriteLine("5. Vending Machine \n6. Day of Week ");
+                Console.WriteLine("7. Temperature Conversion \n8. Monthly Payment ");
+                Console.WriteLine("9. Square Root\n10. Decimal to binary ");
+                Console.WriteLine("11. Prime  anagram and Pallindrome\n12. Binary Search Number ");
+                Console.WriteLine("13. Binary search string \n14. Guess Number");
+                Console.WriteLine(" 15. Permutation of string");
+                Console.WriteLine("16. String Message using RegEx ");
+                Console.WriteLine("17. Exit");
+                Console.WriteLine(" ");
+                Console.WriteLine("Enter Your Choice:");
+                try
                 {
-                    Console.WriteLine(" ");
-                    Console.WriteLine("Algorithm Program List:");
-                    Console.WriteLine("\n1. Insrtion sort\n2. Bubble Sort");
-                    Console.WriteLine("3. Anagram\n4. PrimeNumber");
-                    Console.WriteLine("5. Vending Machine \n6. Day of Week ");
-                    Console.WriteLine("7. Temperature Conversion \n8. Monthly Payment ");
-                    Console.WriteLine("9. Square Root\n10. Decimal to binary ");
-                    Console.WriteLine("11. Prime  anagram and Pallindrome\n12. Binary Search Number ");
-                    Console.WriteLine("13. Binary search string \n14. Guess Number");
-                    Console.WriteLine("15. Merge sort \n16. Permutation of string");
-                    Console.WriteLine("17. Exit");
-                    Console.WriteLine(" ");
-                    Console.WriteLine("Enter Your Choice:");
                     int choice = Convert.ToInt32(Console.ReadLine());
                     switch (choice)
                     {
@@ -71,11 +73,12 @@ namespace FellowshipChaitanya
                         case 14:
                             GuessNumber.GuessnumberInput();
                             break;
+
                         case 15:
-                            MergeSort.MergeSortInput();
+                            PermutationString.PermutationStringInput();
                             break;
                         case 16:
-                            PermutationString.PermutationStringInput();
+                            StringMessage.StringMessageInput();
                             break;
                         case 17:
                             Console.WriteLine("Basic Program Exit!!");
@@ -91,10 +94,10 @@ namespace FellowshipChaitanya
                             break;
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
             }
         }
     }

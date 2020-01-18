@@ -19,6 +19,7 @@ namespace FellowshipChaitanya
                 {
                     array[i] = Console.ReadLine();
                 }
+                Array.Sort(array);
                 Console.WriteLine("Which string do you want to search");
                 String key = Console.ReadLine();
                 int result = Utility.BinarySearchString(array, key);
