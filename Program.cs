@@ -12,9 +12,10 @@ namespace FellowshipChaitanya
                     Console.WriteLine("Program List:");
                     Console.WriteLine("\n1. Basic Programs\n2. Logical Programs");
                     Console.WriteLine("3. Functional Program\n4. Algorithmic Programs");
-                    Console.WriteLine("5. Collection\n6. Exit");
+                    Console.WriteLine("5. Collection\n6. Data Structure");
+                    Console.WriteLine("7. Exit ");
                     Console.WriteLine(" ");
-                    Console.WriteLine("Enter Your Choice:");
+                Console.WriteLine("Enter Your Choice:");
 
                 try
                 {
@@ -38,6 +39,9 @@ namespace FellowshipChaitanya
                             List.ListExample1();
                             break;
                         case 6:
+                            Data_Structure
+                            break;
+                        case 7:
                             Console.WriteLine("Program Exit!!");
                             flag = false;
                             break;

@@ -6,8 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data_Structure\Data_Structure_Utility\**" />
     <Compile Remove="outside the scop\**" />
+    <EmbeddedResource Remove="Data_Structure\Data_Structure_Utility\**" />
     <EmbeddedResource Remove="outside the scop\**" />
+    <None Remove="Data_Structure\Data_Structure_Utility\**" />
     <None Remove="outside the scop\**" />
   </ItemGroup>
 
