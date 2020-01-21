@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FellowshipChaitanya.Data_Structure
+namespace FellowshipChaitanya
 {
     class Palindrome_Chceker
     {
