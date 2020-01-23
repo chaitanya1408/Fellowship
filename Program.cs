@@ -39,7 +39,7 @@ namespace FellowshipChaitanya
                             List.ListExample1();
                             break;
                         case 6:
-                            DataStructureProgram.DataStructureProgramList();
+                            Data_Structure_Programs.Data_Structure_Program_List();
                             break;
                         case 7:
                             Console.WriteLine("Program Exit!!");

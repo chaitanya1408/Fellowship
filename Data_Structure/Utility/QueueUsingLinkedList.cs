@@ -1,26 +1,42 @@
-﻿
-
-namespace FellowshipChaitanya.Data_Structure
+﻿//----------------------------------------------------
+// <copyright file="QueueUsingLinkedList.cs" company="Bridgelabz">
+// Company copyright tag.
+// </copyright>
+//----------------------------------------------------
+namespace FellowshipChaitanya
 {
     using System;
-    using System.Collections;
+    using System.Collections.Generic;
     using System.Text;
 
-   
+    /// <summary>
+    /// QueueUsingLinkedList as a class to implement queue by linked list
+    /// </summary>
     public class QueueUsingLinkedList
     {
-        
+        /// <summary>
+        /// Node as head
+        /// </summary>
         private Node head;
 
+        /// <summary>
+        /// initialize size
+        /// </summary>
         private int size = 0;
 
-        
+        /// <summary>
+        /// Function to check if queue is empty
+        /// </summary>
+        /// <returns>returns true if the queue is empty</returns>
         public bool IsEmpty()
         {
             return this.size == 0;
         }
 
-       
+        /// <summary>
+        /// Function to add the data in queue
+        /// </summary>
+        /// <param name="data">data, to be added, as a parameter</param>
         public void Enqueue(object data)
         {
             Node node = new Node();
@@ -28,7 +44,7 @@ namespace FellowshipChaitanya.Data_Structure
             node.next = null;
             if (this.head == null)
             {
-                this.head = node;
+                this.head = node;                                
             }
             else
             {
@@ -44,7 +60,9 @@ namespace FellowshipChaitanya.Data_Structure
             this.size++;
         }
 
-       
+        /// <summary>
+        /// Function to remove data from queue
+        /// </summary>
         public void Dequeue()
         {
             if (this.head == null)
@@ -52,15 +70,17 @@ namespace FellowshipChaitanya.Data_Structure
                 Console.WriteLine("Queue is already empty");
                 return;
             }
-            else
+            else 
             {
-                this.head = this.head.next;
+                this.head = this.head.next;                
             }
 
             this.size--;
         }
 
-       
+        /// <summary>
+        /// Function to print or show data in queue
+        /// </summary>
         public void Show()
         {
             if (this.head == null)
@@ -80,15 +100,22 @@ namespace FellowshipChaitanya.Data_Structure
             }
         }
 
-      
+        /// <summary>
+        /// Function to calculate the elements in queue
+        /// </summary>
+        /// <returns>returns total no. of elements in queue</returns>
         public int Size()
         {
             return this.size;
         }
 
+        /// <summary>
+        /// Function to get the data in the front queue
+        /// </summary>
+        /// <returns>returns data in the front from queue</returns>
         public object Get()
         {
             return this.head.data;
-        }
+        }        
     }
 }

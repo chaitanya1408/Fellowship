@@ -1,24 +1,37 @@
-﻿
-
-namespace FellowshipChaitanya.Data_Structure
+﻿//----------------------------------------------------
+// <copyright file="LinkedList.cs" company="Bridgelabz">
+// Company copyright tag.
+// </copyright>
+//----------------------------------------------------
+namespace FellowshipChaitanya
 {
     using System;
     using System.Collections.Generic;
     using System.Text;
 
-    
+    /// <summary>
+    /// LinkedList as a class
+    /// </summary>
     public class LinkedList
     {
-        
+        /// <summary>
+        /// Assume node as a head
+        /// </summary>
         private Node head;
 
-       
+        /// <summary>
+        /// Function to create LinkedList
+        /// </summary>
+        /// <returns>returns new LinkedList</returns>
         public LinkedList List()
         {
             return new LinkedList();
         }
 
-        
+        /// <summary>
+        /// Function to append the data in linked list
+        /// </summary>
+        /// <param name="data">data as a parameter</param>
         public void Append(object data)
         {
             Node node = new Node();
@@ -40,7 +53,9 @@ namespace FellowshipChaitanya.Data_Structure
             }
         }
 
-        
+        /// <summary>
+        /// Function to show or print data in linked list
+        /// </summary>
         public void Show()
         {
             if (this.head == null)
@@ -58,7 +73,10 @@ namespace FellowshipChaitanya.Data_Structure
             }
         }
 
-        
+        /// <summary>
+        /// Function to add the data at the front
+        /// </summary>
+        /// <param name="data">data as a parameter</param>
         public void Add(object data)
         {
             Node node = new Node();
@@ -76,7 +94,9 @@ namespace FellowshipChaitanya.Data_Structure
             }
         }
 
-        
+        /// <summary>
+        /// Function to remove data from the front
+        /// </summary>
         public void Shift()
         {
             if (this.head == null)
@@ -89,7 +109,10 @@ namespace FellowshipChaitanya.Data_Structure
             }
         }
 
-        
+        /// <summary>
+        /// Function to remove the data from the end
+        /// </summary>
+        /// <returns>returns the removed data</returns>
         public object Pop()
         {
             Node tempNodeOne = this.head;
@@ -104,7 +127,7 @@ namespace FellowshipChaitanya.Data_Structure
                 return tempNodeOne.data;
             }
             else
-            {
+            {                
                 while (tempNodeOne.next.next != null)
                 {
                     tempNodeOne = tempNodeOne.next;
@@ -117,7 +140,10 @@ namespace FellowshipChaitanya.Data_Structure
             return tempNodeTwo.data;
         }
 
-       
+        /// <summary>
+        /// Function to count the size of linked list
+        /// </summary>
+        /// <returns>returns size of list</returns>
         public int Size()
         {
             int count = 0;
@@ -138,7 +164,11 @@ namespace FellowshipChaitanya.Data_Structure
             }
         }
 
-       
+        /// <summary>
+        /// Function to insert the data at given index
+        /// </summary>
+        /// <param name="index">index as a parameter</param>
+        /// <param name="data">data as a parameter</param>
         public void Insert(int index, object data)
         {
             Node node = new Node();
@@ -175,7 +205,11 @@ namespace FellowshipChaitanya.Data_Structure
             }
         }
 
-        
+        /// <summary>
+        /// Function to remove data from the given index
+        /// </summary>
+        /// <param name="index">index as a parameter</param>
+        /// <returns>returns removed data</returns>
         public object Pop(int index)
         {
             Node node = this.head;
@@ -187,13 +221,13 @@ namespace FellowshipChaitanya.Data_Structure
             }
 
             if (index >= this.Size())
-            {
+            {                
                 return this.Pop();
             }
 
             for (int i = 0; i < index - 1; i++)
             {
-                node = node.next;
+                node = node.next;             
             }
 
             Node tempNodeTwo = node;
@@ -202,7 +236,10 @@ namespace FellowshipChaitanya.Data_Structure
             return tempNodeOne.data;
         }
 
-       
+        /// <summary>
+        /// Function to remove given data from linked list
+        /// </summary>
+        /// <param name="data">data, to be removed, as a parameter</param>
         public void Remove(object data)
         {
             Node tempNode = this.head, prev = null;
@@ -233,7 +270,11 @@ namespace FellowshipChaitanya.Data_Structure
             }
         }
 
-       
+        /// <summary>
+        /// Function to search the given data in the linked list
+        /// </summary>
+        /// <param name="data">data, to be searched, as a parameter</param>
+        /// <returns>returns true if the given data found</returns>
         public bool Search(object data)
         {
             if (this.head == null)
@@ -241,7 +282,7 @@ namespace FellowshipChaitanya.Data_Structure
                 return false;
             }
 
-            Node tempNode = this.head;
+            Node tempNode = this.head;            
             while (tempNode != null)
             {
                 if (tempNode.data + string.Empty == data + string.Empty)
@@ -254,8 +295,11 @@ namespace FellowshipChaitanya.Data_Structure
 
             return false;
         }
-
-      
+        
+        /// <summary>
+        /// Function to check if the linked is empty
+        /// </summary>
+        /// <returns>returns true if linked list is empty</returns>
         public bool IsEmpty()
         {
             if (this.head == null)
@@ -266,7 +310,11 @@ namespace FellowshipChaitanya.Data_Structure
             return false;
         }
 
-       
+        /// <summary>
+        /// Function to find index number of given data
+        /// </summary>
+        /// <param name="data">data as a parameter</param>
+        /// <returns>returns index number of given data</returns>
         public int Index(object data)
         {
             int find = 0;
@@ -284,8 +332,12 @@ namespace FellowshipChaitanya.Data_Structure
 
             return find;
         }
-
-      
+        
+        /// <summary>
+        /// Function to get the data by index number
+        /// </summary>
+        /// <param name="index">index number as a parameter</param>
+        /// <returns>returns data from given index number</returns>
         public object Get(int index)
         {
             Node tempNode = this.head;
@@ -314,7 +366,11 @@ namespace FellowshipChaitanya.Data_Structure
             }
         }
 
-       
+        /// <summary>
+        /// Function to replace or put data at given index number
+        /// </summary>
+        /// <param name="index">index number as a parameter</param>
+        /// <param name="data">data as a parameter</param>
         public void Put(int index, object data)
         {
             Node node = new Node();
@@ -334,8 +390,8 @@ namespace FellowshipChaitanya.Data_Structure
             {
                 Node tempNode = this.head.next.next;
                 this.head.next = node;
-                node.next = tempNode;
-            }
+                node.next = tempNode;                
+            } 
             else
             {
                 Node tempNodeOne = this.head;
@@ -350,7 +406,10 @@ namespace FellowshipChaitanya.Data_Structure
             }
         }
 
-      
+        /// <summary>
+        /// Function to add the data in linked list by ascending order
+        /// </summary>
+        /// <param name="data">data as a parameter</param>
         public void AddOrder(object data)
         {
             Node node = new Node();
@@ -373,8 +432,10 @@ namespace FellowshipChaitanya.Data_Structure
                 node.next = tempNodeTwo;
             }
         }
-
-       
+      
+        /// <summary>
+        /// Function to arrange linked list in ascending order
+        /// </summary>
         public void OrederLinkedList()
         {
             if (this.Size() < 2)

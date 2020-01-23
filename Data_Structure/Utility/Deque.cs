@@ -1,20 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace FellowshipChaitanya.Data_Structure
+﻿//----------------------------------------------------
+// <copyright file="Deque.cs" company="Bridgelabz">
+// Company copyright tag.
+// </copyright>
+//----------------------------------------------------
+namespace FellowshipChaitanya
 {
     using System;
     using System.Collections.Generic;
     using System.Text;
 
-    
+    /// <summary>
+    /// Deque as a class
+    /// </summary>
     public class Deque
     {
-       
+        /// <summary>
+        /// Assume node as a head
+        /// </summary>
         private Node head;
-
-       
+        
+        /// <summary>
+        /// Function to add data to the front
+        /// </summary>
+        /// <param name="data">data as a parameter</param>
         public void AddFront(object data)
         {
             Node node = new Node();
@@ -32,7 +40,10 @@ namespace FellowshipChaitanya.Data_Structure
             }
         }
 
-       
+        /// <summary>
+        /// Function to add data to the rear
+        /// </summary>
+        /// <param name="data">data as a parameter</param>
         public void AddRear(object data)
         {
             Node node = new Node();
@@ -40,7 +51,7 @@ namespace FellowshipChaitanya.Data_Structure
             node.next = null;
             if (this.head == null)
             {
-                this.head = node;
+                this.head = node;                
             }
             else
             {
@@ -54,7 +65,10 @@ namespace FellowshipChaitanya.Data_Structure
             }
         }
 
-        
+        /// <summary>
+        /// Function to remove data from the front
+        /// </summary>
+        /// <returns>Returns removed data</returns>
         public object RemoveFront()
         {
             if (this.head == null)
@@ -69,7 +83,10 @@ namespace FellowshipChaitanya.Data_Structure
             }
         }
 
-        
+        /// <summary>
+        /// Function to remove data at the rear
+        /// </summary>
+        /// <returns>Returns removed data</returns>
         public object RemoveRear()
         {
             if (this.head == null)
@@ -96,7 +113,10 @@ namespace FellowshipChaitanya.Data_Structure
             }
         }
 
-      
+        /// <summary>
+        /// Function to count size
+        /// </summary>
+        /// <returns>Returns size</returns>
         public int Size()
         {
             int count = 0;
@@ -117,11 +137,13 @@ namespace FellowshipChaitanya.Data_Structure
             }
         }
 
-       
+        /// <summary>
+        /// Function to check if queue is empty
+        /// </summary>
+        /// <returns>Returns true if empty. False otherwise</returns>
         public bool IsEmpty()
         {
             return this.Size() == 0;
         }
     }
-
 }
