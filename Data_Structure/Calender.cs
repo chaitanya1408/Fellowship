@@ -25,8 +25,9 @@ namespace FellowshipChaitanya
                 Console.WriteLine("Enter month");
                 int month = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Enter year");
+                int date = 1;
                 int year = Convert.ToInt32(Console.ReadLine());
-                int start = utility.DayOfweek(1, month, year);
+                int start = utility.  DayOfweek(date, month, year);
                 string[] months = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
                 string[] days = { "S", "M", "T", "W", "T", "F", "S" };
                 Console.WriteLine("Calender " + month + " " + year);

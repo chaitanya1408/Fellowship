@@ -15,7 +15,7 @@ namespace FellowshipChaitanya
                     Console.WriteLine(" ");
                     Console.WriteLine("Logical Program List:");
                     Console.WriteLine("\n1. Gambler\n2. Coupon Number ");
-                    Console.WriteLine("");
+                    Console.WriteLine("3. Tic Tac Toe ");
                     Console.WriteLine("3. Exit ");
                     Console.WriteLine("Enter your choice:");
                 try
@@ -29,8 +29,12 @@ namespace FellowshipChaitanya
                         case 2:
                             CouponNumbers.CouponnumberInput();
                             break;
-                        
                         case 3:
+                            TicTacToeGame.TicTAcToe();
+                            break;
+                           
+                        
+                        case 4:
                             Console.WriteLine("Logical Program exit!");
                             flag = false;
                             break;

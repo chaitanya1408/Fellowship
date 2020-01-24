@@ -23,26 +23,58 @@ namespace FellowshipChaitanya
             {
                 Stack stack = new Stack();
                 Console.WriteLine("Enter arithmatic expression");
-                string expression = Console.ReadLine();
+                String expression = Console.ReadLine();
+                char[] expressionarray = new char[expression.Length];
 
-                /// Regex expression to accept elements which is necessary for valid expression
-                while (!Regex.IsMatch(expression, @"^[0-9-+/*)(]+$"))
+                /// Regex expression to accept elements which is necessary for valid expression \((?>\((?<c>)|[^()]+|\)(?<-c>))*(?(c)(?!))\)
+               /* while (!Regex.IsMatch(expression, @"^[0-9-+/*)(]+$"))
                 {
                     Console.WriteLine("Enter valid arithmatic expression");
                     expression = Console.ReadLine();
-                }
+                }*/
 
                 /// iterating to push elements on respective condition
                 for (int i = 0; i < expression.Length; i++)
                 {
-                    if (expression[i] + string.Empty == "(")
+                    if (expressionarray[i] + string.Empty == "(")
                     {
                         stack.Push("(");
                     }
 
-                    if (expression[i] + string.Empty == ")")
+                    if (expressionarray[i] + string.Empty == ")")
                     {
                         stack.Pop();
+                    }
+                    if (expressionarray[i] + string.Empty == "{")
+                    {
+                        stack.Push("(");
+                    }
+
+                    if (expressionarray[i] + string.Empty == "}")
+                    {
+                        stack.Pop();
+                    }
+                    if (expressionarray[i] + string.Empty == "<")
+                    {
+                        stack.Push("(");
+                    }
+
+                    if (expressionarray[i] + string.Empty == ">")
+                    {
+                        stack.Pop();
+                    }
+                    if (expressionarray[i] + string.Empty == "[")
+                    {
+                        stack.Push("(");
+                    }
+
+                    if (expressionarray[i] + string.Empty == "]")
+                    {
+                        stack.Pop();
+                    }
+                    else
+                    {
+                        i++;
                     }
                 }
 

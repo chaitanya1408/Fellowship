@@ -79,9 +79,9 @@ namespace FellowshipChaitanya
         public void DeleteFromFile(int input, Hash hash)
         {
             hash.Remove(input);
-            string changeFile = File.ReadAllText(@"C:\Users\admin\source\Bridge\DataStructure\DataStructure\HashNumbers.txt", Encoding.UTF8);
+            string changeFile = File.ReadAllText(@"C:\Users\admin\source\repos\FellowshipChaitanya\FellowshipChaitanya\Data_Structure\HashNumbers.txt", Encoding.UTF8);
             changeFile = changeFile.Replace(input + string.Empty, "0");
-            File.WriteAllText(@"C:\Users\admin\source\Bridge\DataStructure\DataStructure\HashNumbers.txt", changeFile);
+            File.WriteAllText(@"C:\Users\admin\source\repos\FellowshipChaitanya\FellowshipChaitanya\Data_Structure\HashNumbers.txt", changeFile);
         }
 
         /// <summary>
@@ -158,15 +158,15 @@ namespace FellowshipChaitanya
         /// <param name="m">month as a parameter</param>
         /// <param name="y">year as a parameter</param>
         /// <returns>return day number</returns>
-        public int DayOfweek(int d, int m, int y)
+      
+        public  int DayOfweek(int date, int month  , int year)
         {
-            double y0 = y - Math.Floor((double)(14 - m) / 12);
-            double x = y0 + Math.Floor(y0 / 4) - Math.Floor(y0 / 100) + Math.Floor(y0 / 400);
-            double m0 = m + (12 * Math.Floor((double)((14 - m) / 12))) - 2;
-            double d0 = Math.Ceiling((d + x + (31 * m0 / 12)) % 7);            
-            return (int)d0;
+            int yy = year - (14 - month) / 12;
+            int x = yy + yy / 4 - yy / 100 + yy / 400;
+            int mm = month + 12 * ((14 - month) / 12) - 2;
+            int day = (date + x + 31 * mm / 12) % 7;
+            return day;
         }
-
         /// <summary>
         /// Function to check if given year is leap
         /// </summary>

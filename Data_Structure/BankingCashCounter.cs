@@ -64,7 +64,7 @@ namespace FellowshipChaitanya
                                 cash = Convert.ToInt32(Console.ReadLine());
                             }
 
-                            bankBalance = bankBalance + cash;
+                            bankBalance += cash;
                             peopleInQueue.Dequeue();
                             break;
 

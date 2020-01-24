@@ -16,8 +16,11 @@ namespace FellowshipChaitanya
     public class CalenderByQueue
     {
         /// <summary>
-        /// DisplayCalender as a function
+        /// Displays the calender.
         /// </summary>
+        /// 
+
+        
         public static void DisplayCalender()
         {
             UtilityFunctions utility = new UtilityFunctions();
@@ -25,9 +28,10 @@ namespace FellowshipChaitanya
             Console.WriteLine("Enter month");
             int month = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter year");
+            int date = 1;
             int year = Convert.ToInt32(Console.ReadLine());
             string[] months = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
-            int start = utility.DayOfweek(1, month, year);
+            int start = utility.DayOfweek(date, month, year);
             int endDate = utility.EndDate(month, year);
             while (start > 1)
             {

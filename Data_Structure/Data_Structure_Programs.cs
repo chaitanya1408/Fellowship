@@ -26,6 +26,7 @@ namespace FellowshipChaitanya
                 Console.WriteLine("9: PrimeAnagram By Queue");
                 Console.WriteLine("10: Calender");
                 Console.WriteLine("11: Calender By Queue");
+                //Console.WriteLine("12: Numbers that are Prime and anagram");
                 Console.WriteLine("0: Exit");
                 string input = Console.ReadLine();
 
@@ -77,6 +78,10 @@ namespace FellowshipChaitanya
                         case 11:
                             CalenderByQueue.DisplayCalender();
                             break;
+                        case 12:
+                            PrimeAnagram.PrimeAnagramInput();
+                            break;
+                            
 
                         case 0:
                             exit = true;
