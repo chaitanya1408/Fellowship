@@ -20,3 +20,5 @@ C:\Users\admin\source\repos\FellowshipChaitanya\FellowshipChaitanya\obj\Debug\ne
 C:\Users\admin\source\repos\FellowshipChaitanya\FellowshipChaitanya\obj\Debug\netcoreapp3.0\FellowshipChaitanya.AssemblyInfo.cs
 C:\Users\admin\source\repos\FellowshipChaitanya\FellowshipChaitanya\obj\Debug\netcoreapp3.0\FellowshipChaitanya.dll
 C:\Users\admin\source\repos\FellowshipChaitanya\FellowshipChaitanya\obj\Debug\netcoreapp3.0\FellowshipChaitanya.pdb
+C:\Users\admin\source\repos\FellowshipChaitanya\FellowshipChaitanya\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+C:\Users\admin\source\repos\FellowshipChaitanya\FellowshipChaitanya\obj\Debug\netcoreapp3.0\FellowshipChaitanya.csproj.CopyComplete

@@ -1,0 +1,31 @@
+{
+  "AddressBook": [
+    {
+      "firstName": "Chaitanya",
+      "lastName": "Vaidya",
+      "address": "Near Mandir",
+      "city": "Sangameshwar",
+      "state": "Maharashtra",
+      "zip": 415611,
+      "mobile": 9960197139
+    },
+    {
+      "firstName": "Shakti",
+      "lastName": "Satapathy",
+      "address": "Near school",
+      "city": "Bhawanipatana",
+      "state": "odisha",
+      "zip": 766001,
+      "mobile": 9423296540
+    },
+    {
+      "firstnmae": "Rima",
+      "lastname": "Das",
+      "address": "khadakwasala",
+      "city": "Pune",
+      "state": "Maharshtra",
+      "zip": 415612,
+      "mobile": 9960197139
+    }
+  ]
+}
