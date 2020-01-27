@@ -33,7 +33,7 @@ namespace FellowshipChaitanya
                 Console.WriteLine("Calender " + month + " " + year);
                 Console.WriteLine(months[month - 1] + "  " + year);
                 int endDate = utility.EndDate(month, year);
-                for (int i = 0; i < days.Length; i++)
+                for (int i = 0; i <days.Length; i++)
                 {
                     Console.Write(days[i] + "  ");
                 }

@@ -47,7 +47,10 @@ namespace FellowshipChaitanya.Object_Oriented_Programs.AddressBook
                     switch (choice)
                     {
                         case 1:
-                            AddressBookUtility.display();
+                            AddressBookUtility.Display();
+                            break;
+                        case 2:
+                            AddressBookUtility.AddInfo();
                             break;
                         case 7:
                             Console.WriteLine("Exited From Address Book");
