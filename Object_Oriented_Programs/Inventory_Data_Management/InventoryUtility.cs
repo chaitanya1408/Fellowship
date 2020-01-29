@@ -103,7 +103,13 @@ namespace FellowshipChaitanya.Object_Oriented_Programs.Inventory_Data_Management
                 Console.WriteLine(e.Message);
             }
         }
-
+        /// <summary>
+        /// Deletes the item.
+        /// Description:Deleteitem(String item)
+        /// in thsi the userwill provide the item which we want to delete
+        /// the type of item which we want to delet
+        /// </summary>
+        /// <param name="item">The item.</param>
         public static void DeleteItem(string item)
         {
             var json = File.ReadAllText(path);            
@@ -130,7 +136,12 @@ namespace FellowshipChaitanya.Object_Oriented_Programs.Inventory_Data_Management
                 Console.WriteLine("File not found");
             }
         }
-
+        /// <summary>
+        /// Edits the item.
+        /// Description:EditItem(String item)
+        /// in this we edit the items properties like weight price
+        /// </summary>
+        /// <param name="item">The item.</param>
         public static void EditItem(string item)
         {
             var json = File.ReadAllText(path);

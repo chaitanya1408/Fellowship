@@ -20,6 +20,10 @@ namespace FellowshipChaitanya.Object_Oriented_Programs.Inventory_Data_Management
     public class ManagerUtility
     {
         InventoryUtility utility = new InventoryUtility();
+        /// <summary>
+        /// Adds the inventory.
+        /// here user will select which item we want to add in the inventory
+        /// </summary>
         public static void AddInventory()
         {            
             int choice;
@@ -49,7 +53,10 @@ namespace FellowshipChaitanya.Object_Oriented_Programs.Inventory_Data_Management
                     break;
             }
         }
-
+        /// <summary>
+        /// Deletes the inventory.
+        /// here user will decide which item they want to delet
+        /// </summary>
         public static void DeleteInventory()
         {
             int choice;
@@ -79,7 +86,9 @@ namespace FellowshipChaitanya.Object_Oriented_Programs.Inventory_Data_Management
                     break;
             }
         }
-
+        /// <summary>
+        /// Edits the inventory.
+        /// </summary>
         public static  void EditInventory()
         {
             int choice;

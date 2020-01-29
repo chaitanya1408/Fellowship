@@ -47,6 +47,48 @@
             {
                 Console.WriteLine(e.Message);
             }
-        } 
+        }
+        public static void StockValue()
+        {
+            Console.WriteLine("Enter Stock Name");
+            string companyName = Console.ReadLine();
+            var json = File.ReadAllText(path);
+            var jObject = JObject.Parse(json);
+            bool found = false;
+            foreach (var details in jObject["Stock"])
+            {
+                if (companyName == details["stockName"] + "")
+                {
+                    found = true;
+                    Console.WriteLine("Stock Value is " + Convert.ToInt32(details["numberOfShares"]) * Convert.ToInt32(details["sharePrise"]));
+                }
+            }
+
+            if (!found)
+            {
+                Console.WriteLine("Stock not found");
+            }
+        }
+
+        public static void TotalStockValue()
+        {
+           
+            var json = File.ReadAllText(path);
+            var jObject = JObject.Parse(json);
+            bool found = false;
+            int totalstockvalue = 0;
+            foreach (var details in jObject["Stock"])
+            {
+                found = true;
+                 Console.WriteLine("Company Name is:"+ details["stockName"] + "\nNumber of shares :" +details["numberOfShares"]+ "\nPrice of eace share is:"+Convert.ToInt32(details["numberOfShares"])+"\nTotal stock price is:"+ Convert.ToInt32(details["numberOfShares"]) * Convert.ToInt32(details["sharePrise"]));
+                totalstockvalue = totalstockvalue + Convert.ToInt32(details["numberOfShares"]) * Convert.ToInt32(details["sharePrise"]);
+                Console.WriteLine("--------------------------------------------------");
+            }
+            Console.WriteLine("Value of Total Stock:" + totalstockvalue) ;
+            if (!found)
+            {
+                Console.WriteLine("Stock not found");
+            }
+        }
     }
 }

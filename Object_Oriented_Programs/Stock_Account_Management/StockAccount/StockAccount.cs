@@ -6,5 +6,9 @@ namespace FellowshipChaitanya.Object_Oriented_Programs.Stock_Account_Management.
 {
     class StockAccount
     {
+        public static void StockAccountFunction()
+        {
+
+        }
     }
 }

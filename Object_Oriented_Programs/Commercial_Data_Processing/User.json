@@ -1,0 +1,12 @@
+{
+  "User": [
+    {
+      "id": "ID1",
+      "Name": "Chaitanya",
+      "Amount": 10000,
+      "stockName": "",
+      "numberOfShares": 0,
+      "sharePrise":0,
+    }
+  ]
+}

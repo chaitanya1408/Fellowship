@@ -1,0 +1,25 @@
+{
+  "Company": 
+  [
+    {
+      "stockName": "Tata and Son's",
+      "numberOfShares": 2000,
+      "sharePrise": 200
+    },
+    {
+      "stockName": "Reliance Industries",
+      "numberOfShares": 1500,
+      "sharePrise": 175
+    },
+    {
+      "stockName": "Godrej",
+      "numberOfShares": 150,
+      "sharePrise": 170
+    },
+    {
+      "stockName": "gzhd",
+      "numberOfShares": 10,
+      "sharePrise": 20
+    }
+  ]
+}

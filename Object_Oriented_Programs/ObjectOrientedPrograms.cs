@@ -17,7 +17,8 @@
                 Console.WriteLine("2. Inventory Data Management");
                 Console.WriteLine("3. Stock Account Management");
                 Console.WriteLine("4. Deck of Cards");
-                Console.WriteLine("5. Exit");
+                Console.WriteLine("5. Deck Of Cards by using queue");
+                Console.WriteLine("6. Exit");
                 Console.WriteLine("");
                 Console.WriteLine("Enter your choice:");
                 try
@@ -35,9 +36,12 @@
                             Stock_Account_Management.StockAccountManagemennt.StockAccountManagementOperations();
                             break;
                         case 4:
-                            DeckOfCards.DeckOfCardsFunction();
+                            Deck_Of_Card.DeckOfCards.DeckOfCardsFunction();
                             break;
                         case 5:
+                            Deck_Of_Card_usingQueue_Using_LinkedList.DeckOfCard.DeckOfCardsFunction();
+                            break;
+                        case 6:
                             Console.WriteLine("Exit From Object Oriented Programs");
                             flag = false;
                             break;

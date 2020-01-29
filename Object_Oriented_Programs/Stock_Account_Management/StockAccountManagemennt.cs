@@ -14,7 +14,9 @@
                 Console.WriteLine("Stock Account Management Program!!!");
                 Console.WriteLine("1. View All the Stocks and their value");
                 Console.WriteLine("2. Add the new company");
-                Console.WriteLine("3.Exit");
+                Console.WriteLine("3. Stock Value");
+                Console.WriteLine("4. Total stock value");
+                Console.WriteLine("5. Exit");
                 Console.WriteLine("");
                 Console.WriteLine("Enter Your Choice");
                 int choice = Convert.ToInt32(Console.ReadLine());
@@ -27,6 +29,12 @@
                         StockAccountManagementUtility.AddStock();
                         break;
                     case 3:
+                        StockAccountManagementUtility.StockValue();
+                        break;
+                    case 4:
+                        StockAccountManagementUtility.TotalStockValue();
+                        break;
+                    case 5:
                         Console.WriteLine("Exit from Stock Account Management");
                         flag = false;
                         break;
