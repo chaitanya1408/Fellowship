@@ -39,7 +39,7 @@
                             Deck_Of_Card.DeckOfCards.DeckOfCardsFunction();
                             break;
                         case 5:
-                            Deck_Of_Card_usingQueue_Using_LinkedList.DeckOfCard.DeckOfCardsFunction();
+                            Deck_Of_Card_usingQueue_Using_LinkedList.Cards.CardsInput();
                             break;
                         case 6:
                             Console.WriteLine("Exit From Object Oriented Programs");
