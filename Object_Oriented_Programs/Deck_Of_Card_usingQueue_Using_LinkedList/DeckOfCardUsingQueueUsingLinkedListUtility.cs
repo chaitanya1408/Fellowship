@@ -60,6 +60,13 @@ namespace FellowshipChaitanya.Object_Oriented_Programs.Deck_Of_Card_usingQueue_U
                 throw new Exception(e.Message);
             }
         }
+        /// <summary>
+        /// Shufflings the deck.
+        /// it will return the deck
+        /// </summary>
+        /// <param name="deck">The deck.</param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public static String[] ShufflingDeck(String[] deck)
         {
             try
@@ -79,6 +86,15 @@ namespace FellowshipChaitanya.Object_Oriented_Programs.Deck_Of_Card_usingQueue_U
                 throw new Exception(e.Message);
             }
         }
+        /// <summary>
+        /// Distributings the card.
+        /// this function will get parameter from the user like number of players, number of card to be distributed and the deck array.
+        /// it will show in 2d array distributedPages
+        /// </summary>
+        /// <param name="players">The players.</param>
+        /// <param name="cards">The cards.</param>
+        /// <param name="shuffleDeck">The shuffle deck.</param>
+        /// <exception cref="Exception"></exception>
         public static void DistributingCard(int players,int cards,String[] shuffleDeck)
         {
             try
@@ -87,11 +103,11 @@ namespace FellowshipChaitanya.Object_Oriented_Programs.Deck_Of_Card_usingQueue_U
                 QueueUsingLinkedList cardsque = new QueueUsingLinkedList();
                 for (int i = 0; i < players * cards; i++)
                 {
-                    cardsque.Enqueue(shuffleDeck[i]);
+                    cardsque.Enqueue(shuffleDeck[i]);//cards are enqueue in cardsque
                 }
                 for (int i = 0; i < players; i++)
                 {
-                    playersque.Enqueue("Player:" + (i + 1));
+                    playersque.Enqueue("Player:" + (i + 1));//players are enqueue in playersque
                 }
                 playersque.Show();
                 while (!playersque.IsEmpty())

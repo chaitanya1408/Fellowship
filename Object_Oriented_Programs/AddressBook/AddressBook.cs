@@ -34,11 +34,11 @@ namespace FellowshipChaitanya.Object_Oriented_Programs.AddressBook
                 Console.WriteLine("!!!Address Book!!!");
                 Console.WriteLine("1. To view all person's info:");
                 Console.WriteLine("2. To create new Persons info:");
-                Console.WriteLine("3. To edit Existing persons info: ");
+                /*Console.WriteLine("3. To edit Existing persons info: ");
                 Console.WriteLine("4. To delete Persons info:");
                 Console.WriteLine("5. To sort persons info by name:");
-                Console.WriteLine("6. To sort Persons info by zip:");
-                Console.WriteLine("7. Exit");
+                Console.WriteLine("6. To sort Persons info by zip:");*/
+                Console.WriteLine("3. Exit");
                 Console.WriteLine("");
                 Console.WriteLine("Enter Choice:");//asking for opeation choice
                 try
@@ -52,7 +52,7 @@ namespace FellowshipChaitanya.Object_Oriented_Programs.AddressBook
                         case 2:
                             AddressBookUtility.AddInfo();
                             break;
-                        case 7:
+                        case 3:
                             Console.WriteLine("Exited From Address Book");
                             flag = false;
                             break;

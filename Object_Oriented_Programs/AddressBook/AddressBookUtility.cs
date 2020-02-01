@@ -85,38 +85,8 @@ namespace FellowshipChaitanya.Object_Oriented_Programs.AddressBook
             {
                 throw new Exception(e.Message);
             }
+     
+
         }
-       /* public static void EditInfo()
-        {
-            var json = File.ReadAllText(path);
-            Console.WriteLine("Enter the first name");
-            String firstName = Console.ReadLine();
-            Console.WriteLine("Enter 10 Digit Mobile Number");
-            int mobile = Convert.ToInt32(Console.ReadLine());
-            string itemType = Console.ReadLine();
-            var jObject = JObject.Parse(json);
-            JArray personArray = (JArray)jObject[mobile];
-            bool found = false;
-            foreach (var updateItems in personArray) //.Where(obj => obj["firstName"].Value<string>() == itemType))
-            {
-                if (x.["name"] + string.Empty == itemType)
-                    Console.WriteLine("Enter new name");
-                updateItems["name"] = Console.ReadLine();
-                Console.WriteLine("Enter new weight");
-                updateItems["weight"] = Console.ReadLine();
-                Console.WriteLine("Enter new price per kg");
-                updateItems["pricePerKg"] = Console.ReadLine();
-                found = true;
-            }
-            jObject[item] = itemArrary;
-            string output = Newtonsoft.Json.JsonConvert.SerializeObject(jObject, Newtonsoft.Json.Formatting.Indented);
-            File.WriteAllText(path, output);
-            if (!found)
-            {
-                Console.WriteLine("File not found");
-            }
-
-
-        }*/
     }
 }
