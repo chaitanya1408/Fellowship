@@ -21,10 +21,16 @@ namespace FellowshipChaitanya.Object_Oriented_Programs.AddressBook
     using System.Collections.Generic;
     using System.IO;
     using System.Text;
+    using System.Text.RegularExpressions;
+
+
 
 
     public class AddressBookUtility
     {
+        static String regex = @"^9\d{9}$";
+        static String nameregex = @"^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$";
+        static Boolean result;
         //giving path of AddressBOOk.json file
         static string  path = @"C:\Users\admin\source\repos\FellowshipChaitanya\FellowshipChaitanya\Object_Oriented_Programs\AddressBook\AddressBook.json";
         /// <summary>
@@ -52,22 +58,60 @@ namespace FellowshipChaitanya.Object_Oriented_Programs.AddressBook
         {
             try
             {
-                Console.WriteLine("Enter First Name");
+                label1: Console.WriteLine("Enter First Name");
                 string firstName = Console.ReadLine();
-                Console.WriteLine("Enter Last Name");
-                string lastName = Console.ReadLine();
-                Console.WriteLine("Enter Address");
-                string address = Console.ReadLine();
-                Console.WriteLine("Enter City");
-                string city = Console.ReadLine();
-                Console.WriteLine("Enter State");
-                string state = Console.ReadLine();
-                Console.WriteLine("Enter Zip code");
-                int zip = Convert.ToInt32(Console.ReadLine());
-                int mobile;
-                Console.WriteLine("Enter 10 Digit Mobile Number");
-                mobile = Convert.ToInt32(Console.ReadLine());
+                result = Regex.IsMatch(firstName, nameregex);
+                if (result == false)
+                {
+                    Console.WriteLine("Invalid Input");
+                    goto label1;
+                }
 
+                label2: Console.WriteLine("Enter Last Name");
+                string lastName = Console.ReadLine();
+                result = Regex.IsMatch(lastName, nameregex);
+                if (result == false)
+                {
+                    Console.WriteLine("Invalid Input");
+                    goto label2;
+                }
+                label3: Console.WriteLine("Enter Address");
+                string address = Console.ReadLine();
+                result = Regex.IsMatch(address, nameregex);
+                if (result == false)
+                {
+                    goto label3;
+                }
+
+                label4: Console.WriteLine("Enter City");
+                string city = Console.ReadLine();
+                result = Regex.IsMatch(city, nameregex);
+                if (result == false)
+                {
+                    goto label4;
+                }
+
+                label5: Console.WriteLine("Enter State");
+                string state = Console.ReadLine();
+                result = Regex.IsMatch(state, nameregex);
+                if (result == false)
+                {
+                    goto label5;
+                }
+                label6: Console.WriteLine("Enter Zip code");
+                int zip = Convert.ToInt32(Console.ReadLine());
+                result = Regex.IsMatch(city, nameregex);
+                if (result == false)
+                {
+                    goto label6;
+                }
+                label7: Console.WriteLine("Enter 10 Digit Mobile Number");
+                String mobile = Console.ReadLine();
+                result = Regex.IsMatch(mobile, regex);
+                if (result == false)
+                {
+                    goto label7;
+                }
                 var newPerson = "{'firstName': '" + firstName + "' ,'lastName':'" + lastName + "','address':'" + address + "','city':'" + city + "' ,'state':'" + state + "','zip':" + zip + ",'mobile':" + mobile + "}";
 
 

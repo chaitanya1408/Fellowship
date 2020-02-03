@@ -56,7 +56,9 @@ namespace FellowshipChaitanya.Object_Oriented_Programs.Inventory_Data_Management
             set { this.pricePerKg = value; }
         }
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     public class InventoryList
     {
         public List<InventoryData> Rice { get; set; }
