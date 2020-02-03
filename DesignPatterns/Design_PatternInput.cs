@@ -21,7 +21,7 @@ namespace FellowshipChaitanya.DesignPatterns
                     Console.WriteLine("3: Structural Design Pattern");
                     Console.WriteLine("4: Annoatation");
                     Console.WriteLine("5: Reflection");
-                    Console.WriteLine("0: Exit");
+                    Console.WriteLine("6: Exit");
                     string input = Console.ReadLine();
                     if (Regex.IsMatch(input, @"^[0-9]+$"))
                     {
@@ -48,7 +48,7 @@ namespace FellowshipChaitanya.DesignPatterns
                                 Reflection.ReflectionTest();
                                 break;
 
-                            case 0:
+                            case 6:
                                 exit = true;
                                 break;
 
